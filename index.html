@@ -3,58 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Ovando</title>
+    <meta name="description" content="Hotel Paraíso: habitaciones cómodas, desayuno incluido, piscina y atención las 24 horas. Reserva en línea.">
+    <title>Hotel Paraíso | Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>Hotel Ovando</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="paginas/habitaciones.html">Habitaciones</a></li>
-                <li><a href="paginas/servicios.html">Servicios</a></li>
-                <li><a href="paginas/reservas.html">Reservas</a></li>
-            </ul>
+    <header class="encabezado">
+        <h1 class="logo">🏨 Hotel Paraíso</h1>
+        <button id="btnMenu" class="btn-menu" aria-label="Abrir menú">☰</button>
+        <nav id="menu" class="menu">
+        <ul>
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="paginas/habitaciones.html">Habitaciones</a></li>
+            <li><a href="paginas/servicios.html">Servicios</a></li>
+            <li><a href="paginas/reservas.html">Reservas</a></li>
+        </ul>
         </nav>
     </header>
 
-<main>
-    <section id="inicio" class="portada">
-    <h2>Bienvenido a Hotel Ovando</h2>
-    <p>Tu descanso comienza aquí.</p>
-    <a href="#reservas" class="boton">Reservar ahora</a>
-    </section>
-    <section id="habitaciones">
-    <h2>Habitaciones</h2>
-    <div class="tarjeta"><h3>Simple</h3><p>Ideal para una persona. Bs 200/noche.</p></div>
-    <div class="tarjeta"><h3>Doble</h3><p>Para dos personas. Bs 350/noche.</p></div>
-    <div class="tarjeta"><h3>Suite</h3><p>Lujo y comodidad. Bs 600/noche.</p></div>
-    </section>
-    <section id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-        <li>Desayuno incluido</li>
-        <li>Wi-Fi gratuito</li>
-        <li>Piscina</li>
-        <li>Estacionamiento</li>
-    </ul>
-    <button id="btnInfo">Ver más información</button>
-    <p id="infoExtra" class="oculto">Atención las 24 horas, servicio a la habitación y traslado al aeropuerto.</p>
-    </section>
-    <section id="reservas">
-    <h2>Reservas</h2>
-    <form id="formReserva">
-        <input type="text" id="nombre" placeholder="Nombre completo">
-        <input type="email" id="correo" placeholder="Correo electrónico">
-        <input type="date" id="fecha">
-        <button type="submit" class="boton">Enviar reserva</button>
-        <p id="mensaje"></p>
-    </form>
-    </section>
-</main>
+    <main>
+        <!-- PORTADA -->
+        <section id="inicio" class="portada">
+        <h2>Bienvenido a Hotel Paraíso</h2>
+        <p>Tu descanso comienza aquí. Comodidad, calidez y el mejor servicio.</p>
+        <div class="botones-portada">
+            <a href="paginas/reservas.html" class="boton">Reservar ahora</a>
+            <a href="paginas/habitaciones.html" class="boton boton-secundario">Ver habitaciones</a>
+        </div>
+        </section>
 
-<footer><p>&copy; 2026 Hotel Ovando</p></footer>
+        <!-- POR QUÉ ELEGIRNOS -->
+        <section class="contenedor" id="ventajas">
+        <h2 class="titulo-seccion">¿Por qué elegirnos?</h2>
+        <div class="grid">
+            <article class="tarjeta centrada">
+            <span class="icono">🛏️</span>
+            <h3>Máximo confort</h3>
+            <p>Habitaciones amplias, limpias y equipadas para tu descanso.</p>
+            </article>
+            <article class="tarjeta centrada">
+            <span class="icono">🍳</span>
+            <h3>Desayuno incluido</h3>
+            <p>Buffet variado todas las mañanas, sin costo adicional.</p>
+            </article>
+            <article class="tarjeta centrada">
+            <span class="icono">🕐</span>
+            <h3>Atención 24 horas</h3>
+            <p>Recepción disponible a cualquier hora del día.</p>
+            </article>
+        </div>
+        </section>
+
+        <!-- HABITACIONES DESTACADAS -->
+        <section class="contenedor" id="destacadas">
+        <h2 class="titulo-seccion">Habitaciones destacadas</h2>
+        <div class="grid">
+            <article class="tarjeta">
+            <h3>Simple</h3>
+            <p>Ideal para viajes de trabajo.</p>
+            <p class="precio">Bs 200 / noche</p>
+            </article>
+            <article class="tarjeta">
+            <h3>Doble</h3>
+            <p>Perfecta para parejas o amigos.</p>
+            <p class="precio">Bs 350 / noche</p>
+            </article>
+            <article class="tarjeta">
+            <h3>Suite</h3>
+            <p>Lujo, jacuzzi y balcón privado.</p>
+            <p class="precio">Bs 600 / noche</p>
+            </article>
+        </div>
+        <p class="centro"><a href="paginas/habitaciones.html" class="boton">Ver todas las habitaciones</a></p>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="fondo-claro" id="testimonios">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Lo que dicen nuestros huéspedes</h2>
+            <div class="grid">
+            <blockquote class="tarjeta">
+                <p>"Excelente atención y habitaciones muy limpias. Volveremos."</p>
+                <footer>— María G.</footer>
+            </blockquote>
+            <blockquote class="tarjeta">
+                <p>"El desayuno estuvo delicioso y el personal muy amable."</p>
+                <footer>— Carlos R.</footer>
+            </blockquote>
+            <blockquote class="tarjeta">
+                <p>"La suite fue perfecta para nuestro aniversario."</p>
+                <footer>— Lucía y Andrés</footer>
+            </blockquote>
+            </div>
+        </div>
+        </section>
+
+        <!-- LLAMADO A LA ACCIÓN -->
+        <section class="cta">
+        <h2>¿Listo para tu próxima estadía?</h2>
+        <p>Reserva hoy y asegura el mejor precio.</p>
+        <a href="paginas/reservas.html" class="boton">Reservar ahora</a>
+        </section>
+    </main>
+
+<footer class="pie">
+    <div class="pie-grid">
+    <div>
+        <h3>Hotel Paraíso</h3>
+        <p>Tu hogar lejos de casa.</p>
+    </div>
+    <div>
+        <h3>Contacto</h3>
+        <p>📍 Av. Principal #123, Cochabamba</p>
+        <p>📞 +591 4 4000000</p>
+        <p>✉️ info@hotelparaiso.com</p>
+    </div>
+    <div>
+        <h3>Enlaces</h3>
+        <p><a href="paginas/habitaciones.html">Habitaciones</a></p>
+        <p><a href="paginas/servicios.html">Servicios</a></p>
+        <p><a href="paginas/reservas.html">Reservas</a></p>
+    </div>
+    </div>
+    <p class="copy">&copy; 2026 Hotel Paraíso. Todos los derechos reservados.</p>
+</footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
