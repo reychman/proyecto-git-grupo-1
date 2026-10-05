@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Ovando</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Ovando</h1>
+        <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habitaciones">Habitaciones</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+        </ul>
+        </nav>
+    </header>
+
+<main>
+    <section id="inicio" class="portada">
+    <h2>Bienvenido a Hotel Ovando</h2>
+    <p>Tu descanso comienza aquí.</p>
+    <a href="#reservas" class="boton">Reservar ahora</a>
+    </section>
+    <section id="habitaciones">
+    <h2>Habitaciones</h2>
+    <div class="tarjeta"><h3>Simple</h3><p>Ideal para una persona. Bs 200/noche.</p></div>
+    <div class="tarjeta"><h3>Doble</h3><p>Para dos personas. Bs 350/noche.</p></div>
+    <div class="tarjeta"><h3>Suite</h3><p>Lujo y comodidad. Bs 600/noche.</p></div>
+    </section>
+    <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+        <li>Desayuno incluido</li>
+        <li>Wi-Fi gratuito</li>
+        <li>Piscina</li>
+        <li>Estacionamiento</li>
+    </ul>
+    <button id="btnInfo">Ver más información</button>
+    <p id="infoExtra" class="oculto">Atención las 24 horas, servicio a la habitación y traslado al aeropuerto.</p>
+    </section>
+    <section id="reservas">
+    <h2>Reservas</h2>
+    <form id="formReserva">
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <input type="email" id="correo" placeholder="Correo electrónico">
+        <input type="date" id="fecha">
+        <button type="submit" class="boton">Enviar reserva</button>
+        <p id="mensaje"></p>
+    </form>
+    </section>
+</main>
+
+<footer><p>&copy; 2026 Hotel Ovando</p></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
