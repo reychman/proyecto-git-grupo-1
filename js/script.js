@@ -1,11 +1,19 @@
+// Mostrar/ocultar información (página de servicios)
+const btnInfo = document.getElementById("btnInfo");
+if (btnInfo) {
+    btnInfo.addEventListener("click", function () {
+        const info = document.getElementById("infoExtra");
+        info.classList.toggle("oculto");
+        this.textContent = info.classList.contains("oculto")
+        ? "Ver más información"
+        : "Ocultar información";
+    });
+}
 
-document.getElementById("btnInfo").addEventListener("click", function () {
-    const info = document.getElementById("infoExtra");
-    info.classList.toggle("oculto");
-    this.textContent = info.classList.contains("oculto") ? "Ver más información" : "Ocultar información";
-});
-
-document.getElementById("formReserva").addEventListener("submit", function (e) {
+// Validación del formulario (página de reservas)
+const formReserva = document.getElementById("formReserva");
+if (formReserva) {
+    formReserva.addEventListener("submit", function (e) {
     e.preventDefault();
     const nombre = document.getElementById("nombre").value.trim();
     const correo = document.getElementById("correo").value.trim();
@@ -15,9 +23,10 @@ document.getElementById("formReserva").addEventListener("submit", function (e) {
     if (nombre === "" || correo === "" || fecha === "") {
         mensaje.style.color = "red";
         mensaje.textContent = "Por favor completa todos los campos.";
-    } else {
+        } else {
         mensaje.style.color = "green";
         mensaje.textContent = "¡Reserva enviada correctamente, " + nombre + "!";
         this.reset();
     }
 });
+}
